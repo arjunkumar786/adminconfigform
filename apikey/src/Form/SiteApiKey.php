@@ -2,10 +2,7 @@
 
 namespace Drupal\apikey\Form;
 
-// Classes referenced in this class:
 use Drupal\Core\Form\FormStateInterface;
-
-// This is the form we are extending.
 use Drupal\system\Form\SiteInformationForm;
 
 /**
@@ -22,18 +19,16 @@ class SiteApiKey extends SiteInformationForm {
     // Get the original form from the class we are extending.
     $form = parent::buildForm($form, $form_state);
 
-    // Add a textarea to the site information section of the form for our
+    // Add a textfield to the site information section of the form for our
     // description.
     $form['site_information']['siteapikey'] = [
       '#type' => 'textfield',
       '#title' => t('Site API Key'),
-      // The default value is the new value we added to our configuration
-      // in step 1.
       '#default_value' => $site_config->get('siteapikey') ? $site_config->get('siteapikey') : 'No API Key yet',
       '#description' => $this->t('The Site API Key.'),
     ];
 
-    // Update form action test.
+    // Update form action button value.
     $form['actions']['submit']['#value'] = t('Update Configuration');
     return $form;
   }
@@ -47,12 +42,12 @@ class SiteApiKey extends SiteInformationForm {
     !empty($form_state->getValue('siteapikey'))) {
       // system.site.description configuration.
       $this->config('system.site')
-      // The siteapikey is retrieved from the submitted form values
-      // and saved to the 'description' element of the system.site config.
+      // Retrieved siteapikey from the submitted form values & saved it to 
+      // the 'siteapikey' of the system.site config.
         ->set('siteapikey', $form_state->getValue('siteapikey'))
-      // Make sure to save the configuration.
         ->save();
 
+      //Print message after succesfull submission.
       \Drupal::messenger()->addMessage($this->t('Site API Key has been saved with %value', [
         '%value' => $form_state->getValue('siteapikey'),
       ]), 'status', TRUE);

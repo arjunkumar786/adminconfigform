@@ -2,7 +2,6 @@
 
 namespace Drupal\apikey\Routing;
 
-// Classes referenced in this class.
 use Drupal\Core\Routing\RouteSubscriberBase;
 use Symfony\Component\Routing\RouteCollection;
 
