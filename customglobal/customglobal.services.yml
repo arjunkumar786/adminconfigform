@@ -1,0 +1,10 @@
+services:
+  customglobal.customservice:
+    class: Drupal\customglobal\CustomService
+    arguments: ['@current_user']
+
+  customglobal.customservice2:
+    class: Drupal\customglobal\CustomService2
+    arguments: ['@customglobal.customservice']
+
+  

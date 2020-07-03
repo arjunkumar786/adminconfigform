@@ -1,0 +1,17 @@
+custommodule.custommyaccoutform_tab1:
+  route_name: custommodule.custommyaccoutform_tab1
+  title: My User tab1
+  base_route: custommodule.custommyaccoutform_tab1
+  weight: 10
+
+custommodule.custommyaccoutform_tab2:
+  route_name : custommodule.custommyaccoutform_tab2
+  title: My User tab2
+  base_route: custommodule.custommyaccoutform_tab1
+  weight: 11
+
+custommodule.customcontroller_tab3:
+  route_name : custommodule.customcontroller_tab3
+  title: My User tab3
+  base_route: custommodule.custommyaccoutform_tab1
+  weight: 12

@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function customglobal_theme() {
+  return [
+    'myaccountform_tab1_template' => [
+      'render element' => 'form',
+      'template' => 'myaccountform-tab1-template',
+    ],
+    'myaccountform_tab2_template' => [
+      'render element' => 'form',
+      'template' => 'myaccountform-tab2-template',
+    ],
+ ];
+}

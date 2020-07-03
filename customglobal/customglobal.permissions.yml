@@ -1,0 +1,4 @@
+'user custom':
+  title: 'Custom access permission'
+  description: 'Gives access permission custom functionality.'
+  restrict access: true

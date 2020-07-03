@@ -1,0 +1,29 @@
+<div class="tab-content bg-white m-0 formSection">
+	<div class="tab-pane active" id="transactions" role="tabpanel" aria-labelledby="transactions-tab">
+		<form name="updateinfo">
+			{{ form.form_build_id }}
+			{{ form.form_token }}
+			{{ form.form_id }}
+			
+			<div class="row">
+				
+				<div class="col-md-6">
+				
+					<div class="form-group">
+						{{ form.staff_name }}
+					</div>
+					<div class="form-group">
+						{{ form.staff_mail }}
+					</div>
+					<div class="form-group">
+						{{ form.staffcontact }}
+					</div>
+					<div class="form-group">
+						{{ form.staffaddress }}
+					</div>
+				</div>
+			</div>
+			{{ form.actions }}
+		</form>
+	</div>
+</div>

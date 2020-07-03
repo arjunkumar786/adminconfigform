@@ -1,0 +1,23 @@
+custommodule.custommyaccoutform_tab1:
+  path: '/custom/myaccount'
+  defaults:
+    _form: 'Drupal\customglobal\Form\MyAccountForm_tab1'
+    _title: 'My Form Tab1'
+  requirements:
+   _permission: 'access content'
+
+custommodule.custommyaccoutform_tab2:
+  path: '/custom/myaccount/tab2'
+  defaults:
+    _form: 'Drupal\customglobal\Form\MyAccountForm_tab2'
+    _title: 'My Form Tab2'
+  requirements:
+   _permission: 'access content'
+
+custommodule.customcontroller_tab3:
+  path: '/custom/myaccount/tab3'
+  defaults:
+    _controller: 'Drupal\customglobal\Controller\MyAccountForm_tab3::staffsales'
+    _title: 'My Controller Tab3'
+  requirements:
+   _permission: 'access content'
